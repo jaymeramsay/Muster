@@ -11,3 +11,10 @@ describe("express works", function () {
     expect(true).to.be.true;
   });
 });
+
+describe('home page'), () => {
+  it('should show the homepage', function (done) {
+    request.get('/')
+      .expect(200)
+  })
+}
