@@ -21,3 +21,5 @@ router.get('/:id/edit', (req, res) => {
       res.send(item)
     })
 })
+
+module.exports = router;
