@@ -29,8 +29,8 @@ app.use('/items', items);
 // app.use('/auth', auth);
 
 // adds react
-app.use("/public", express.static(__dirname + "/public"));
-app.use("/src", express.static(__dirname + "/src"));
+app.use(express.static(__dirname + "../public"));
+app.use(express.static(__dirname + "../build"));
 
 
 // sets up initial page
