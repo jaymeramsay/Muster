@@ -2,10 +2,13 @@
   "name": "muster",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "server/server.js",
   "scripts": {
-    "test": "mocha test",
-    "start": "node server.js"
+    "test": "react-scripts test --env=jsdom",
+    "start": "node server/server.js",
+    "rstart": "react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject"
   },
   "directories": {
     "test": "test"
@@ -33,6 +36,9 @@
     "method-override": "^2.3.10",
     "mocha": "^4.1.0",
     "pg": "^7.4.1",
-    "supertest": "^3.0.0"
+    "supertest": "^3.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.0.17"
   }
 }
