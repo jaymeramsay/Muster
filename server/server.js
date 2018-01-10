@@ -7,8 +7,8 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const session = require('cookie-session');
 
-const users = require('./routes/users');
-const items = require('./routes/items');
+const users = require('./routes/routes.users');
+const items = require('./routes/routes.items');
 // const auth = require('./routes/auth');
 
 // http method middleware for PATCH and DELETE
@@ -34,11 +34,9 @@ app.use(express.static(__dirname + "../build"));
 
 
 // sets up initial page
-// app.get('/', (req, res, next) => {
-//   res.render('main', {
-//     user: req.session.user
-//   });
-// });
+app.get('/', (req, res, next) => {
+  res.send('booyah');
+});
 
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);

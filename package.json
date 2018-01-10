@@ -11,7 +11,6 @@
     "eject": "react-scripts eject",
     "postinstall": "react-scripts build"
   },
-
   "directories": {
     "test": "test"
   },
@@ -38,9 +37,9 @@
     "method-override": "^2.3.10",
     "mocha": "^4.1.0",
     "pg": "^7.4.1",
-    "supertest": "^3.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.0.17"
+    "react-scripts": "1.0.17",
+    "supertest": "^3.0.0"
   }
 }
