@@ -1,8 +1,30 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
 
-.App-logo {
+body {
+  background-color: teal;
+}
+.titlebar {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  /* justify-content: space-around; */
+  background-color: gold;
+}
+
+.title {
+  order: 1;
+  flex-grow: 1;
+  font-size: 40px;
+  font-family: 'Homemade Apple', cursive;
+  width: 170px;
+}
+
+button {
+ order:2;
+}
+/* .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
@@ -20,7 +42,7 @@
 
 .App-intro {
   font-size: large;
-}
+} */
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

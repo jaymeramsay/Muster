@@ -23,8 +23,9 @@
   "bugs": {
     "url": "https://github.com/jaymeramsay/Muster/issues"
   },
-  "homepage": "https://github.com/jaymeramsay/Muster#readme",
+  "homepage": "",
   "dependencies": {
+    "axios": "^0.17.1",
     "bcrypt": "^1.0.3",
     "bcrypt-as-promised": "^1.1.0",
     "body-parser": "^1.18.2",
@@ -39,6 +40,7 @@
     "pg": "^7.4.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-router": "^4.2.0",
     "react-scripts": "1.0.17",
     "supertest": "^3.0.0"
   }

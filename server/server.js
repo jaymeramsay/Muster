@@ -9,6 +9,7 @@ const session = require('cookie-session');
 
 const users = require('./routes/routes.users');
 const items = require('./routes/routes.items');
+const path = require('path');
 // const auth = require('./routes/auth');
 
 // http method middleware for PATCH and DELETE
@@ -29,14 +30,15 @@ app.use('/items', items);
 // app.use('/auth', auth);
 
 // adds react
-app.use(express.static(__dirname + "../public"));
-app.use(express.static(__dirname + "../build"));
+app.use(express.static(path.join(__dirname, "../build")));
 
-
-// sets up initial page
-app.get('/', (req, res, next) => {
-  res.send('booyah');
+//CORS between React server and this server
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
 });
+
 
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);
