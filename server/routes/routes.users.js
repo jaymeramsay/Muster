@@ -9,9 +9,12 @@ router.get('/', (req, res) => {
     .then((users) => {
       res.send(users);
     })
+    .catch((err) => {
+      next(err);
+    });
 });
 
-router.get('/:id/edit', (req, res) => {
+router.get('/:id', (req, res) => {
   knex('users')
     .where({
       id: req.params.id
@@ -20,20 +23,25 @@ router.get('/:id/edit', (req, res) => {
     .then((user) => {
       res.send(user)
     })
+    .catch((err) => {
+      next(err);
+    });
 })
 
-// router.post('/', (req, res) => {
-// let newUser = {
-// first_name: req.body.first_name,
-//   last_name: req.body.last_name,
-//   email: req.body.email
-// }
-//   knex('users')
-//     .insert(newUser)
-//     .then((user) => {
-//       res.send(users)
-//     })
-// })
-
+router.post('/', (req, res) => {
+let newUser = {
+first_name: req.body.first_name,
+  last_name: req.body.last_name,
+  email: req.body.email
+}
+  knex('users')
+    .insert(newUser)
+    .then((user) => {
+      res.send(users)
+    })
+    .catch((err) => {
+      next(err);
+    });
+})
 
 module.exports = router;

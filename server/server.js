@@ -9,6 +9,7 @@ const session = require('cookie-session');
 
 const users = require('./routes/routes.users');
 const items = require('./routes/routes.items');
+const auth = require('./routes/routes.auth');
 const path = require('path');
 // const auth = require('./routes/auth');
 
@@ -27,6 +28,7 @@ app.use(cookieParser());
 // routes
 app.use('/users', users);
 app.use('/items', items);
+app.use('/auth', auth);
 // app.use('/auth', auth);
 
 // adds react

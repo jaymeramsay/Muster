@@ -9,8 +9,10 @@ body {
   display: inline-flex;
   flex-direction: row-reverse;
   flex-wrap: nowrap;
-  /* justify-content: space-around; */
+  justify-content: space-around;
+  align-self: center;
   background-color: gold;
+  width: 100%;
 }
 
 .title {
@@ -18,11 +20,25 @@ body {
   flex-grow: 1;
   font-size: 40px;
   font-family: 'Homemade Apple', cursive;
-  width: 170px;
+  /* width: 170px; */
+  margin: 5px;
 }
 
-button {
- order:2;
+.menu {
+  height: 100%;
+  width: 300px;
+  display: inline-flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-self: center;
+}
+
+.landingForm {
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
 }
 /* .App-logo {
   animation: App-logo-spin infinite 20s linear;
