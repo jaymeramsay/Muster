@@ -4,10 +4,11 @@ exports.up = function (knex, Promise) {
     table.string('first_name').notNullable();
     table.string('last_name').notNullable();
     table.string('email').notNullable().unique();
+    table.specificType('hashed_password', 'char(60)').notNullable();
+    table.string('amazon_id');
     table.timestamps(true, true);
-  })
+  });
 };
-
 exports.down = function (knex, Promise) {
   return knex.schema.dropTable('users');
 };

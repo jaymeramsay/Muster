@@ -6,19 +6,25 @@ exports.seed = function (knex, Promise) {
       return knex('items').insert([{
           id: 1,
           name: 'Pearl Premier Drum set',
-          cost: 400,
+          picture: 'https://s3.amazonaws.com/images.static.steveweissmusic.com/products/images/uploads/1130852_23178_popup.jpg',
+          old_price: 400,
+          new_price: 325,
           user_id: 1
         },
         {
           id: 2,
           name: 'Doc Martens Boots',
-          cost: 120,
+          picture: 'https://media.journeys.com/images/products/1_74888_ZM.JPG',
+          old_price: 175,
+          new_price: 120,
           user_id: 2
         },
         {
           id: 3,
           name: 'Instapot',
-          cost: 150,
+          picture: 'https://instantpot.com/wp-content/uploads/2014/07/IP-DUO80.png',
+          old_price: 150,
+          new_price: 115,
           user_id: 3
         }
       ]);

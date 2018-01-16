@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
     })
 });
 
-router.get('/:id/edit', (req, res) => {
+router.get('/:id', (req, res) => {
   knex('items')
     .where({
       id: req.params.id

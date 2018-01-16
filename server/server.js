@@ -16,6 +16,8 @@ const path = require('path');
 // http method middleware for PATCH and DELETE
 app.use(methodOverride('_method'));
 
+app.set('view engine', 'ejs');
+
 // forms handling
 app.use(bodyParser.urlencoded({
   extended: true,
@@ -24,6 +26,10 @@ app.use(bodyParser.json());
 
 // authorization
 app.use(cookieParser());
+
+app.get('/', (req, res) => {
+  res.render('landing');
+})
 
 // routes
 app.use('/users', users);

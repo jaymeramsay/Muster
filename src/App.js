@@ -5,13 +5,26 @@ import axios from 'axios';
 import NavBar from './components/navbar';
 import Landing from './components/landing';
 import Dashboard from './components/dashboard';
+import Signup from './components/signup'
 // import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
    constructor(props){
      super(props);
+     this.handleAuth = this.handleAuth.bind(this);
+     this.handleSignOut = this.handleSignOut.bind(this);
+     this.state = { isLoggedIn: false, user: null }
    }
+
+   handleAuth(user) {
+       this.setState({ isLoggedIn:true, user:user})
+     }
+
+  handleSignOut(){
+   this.setState({ isLoggedIn: false, user: null });
+   window.location.href="/";
+ }
 
   render() {
     return (
@@ -19,6 +32,7 @@ class App extends Component {
       <NavBar/>
       <Route exact path='/' render={(props) => <Landing {...props}/>}/>
       <Route path='/dashboard' render={(props) => <Dashboard {...props}/>}/>
+      <Route path='/signup' render={(props) => <Signup {...props}/>}/>
       </div>
     );
   }
