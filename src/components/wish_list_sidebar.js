@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-class WishList extends Component {
+class Wishlist extends Component {
   constructor(props) {
     super(props);
     this.state = {data: 'loading...',
@@ -16,10 +16,16 @@ componentDidMount() {
   this.setState({width: width, height: height})
     }
 
+
  render() {
    return (
-     <h1>Wishlist sidebar</h1>
+     <div className="Wishlist">
+     <aside className="sidebar">
+
+     </aside>
+     </div>
    )
+  }
  };
 
 export default Wishlist;

@@ -5,6 +5,8 @@
 body {
   background-color: teal;
 }
+
+/* =======NavBar============== */
 .titlebar {
   display: inline-flex;
   flex-direction: row-reverse;
@@ -40,27 +42,25 @@ body {
   justify-content: center;
   align-self: center;
 }
-/* .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+
+
+/* ===============Dashboard============= */
+.Dashboard{
+  display: flex;
+  flex-direction: row;
+
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+
+/* ===========Wishlist Sidebar========== */
+.Wishlist{
+  display: flex;
+  border: 2px solid red;
+  width: 200px;
+  height: 200px;
 }
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-} */
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.sidebar{
+  border: 2px solid black;
+  width: 100%;
+  height: 100%;
 }

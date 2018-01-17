@@ -8,8 +8,6 @@ class Landing extends Component {
     super(props);
     this.onEmailSignIn = this.onEmailSignIn.bind(this);
     this.toSignUpPage = this.toSignUpPage.bind(this);
-    // this.onEmailChange = this.onEmailChange.bind(this);
-    // this.onPasswordChange = this.onPasswordChange.bind(this);
     this.state = {email: '', password: ''}
   }
 

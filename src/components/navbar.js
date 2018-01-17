@@ -7,7 +7,6 @@ class NavBar extends Component {
     this.onSignOut = this.onSignOut.bind(this);
     this.state = {
       active: false,
-      user: ''
     };
   }
 
@@ -26,9 +25,7 @@ class NavBar extends Component {
         <header className="titlebar">
         <h1 className="title">Muster</h1>
         <div className="menu">
-        <div className="greeting">Welcome!</div>
-        <div className="sample2">Booyah</div>
-        <div className="sample1">About</div>
+        <div className="greeting">Welcome {this.props.user.first_name}!</div>
         </div>
         <button onClick={this.onSignOut}>Sign Out</button>
         </header>
