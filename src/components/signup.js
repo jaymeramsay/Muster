@@ -29,12 +29,17 @@ class Signup extends Component {
   }
 
   onSignUp(ev){
+    ev.preventDefault();
     console.log('hitting signup button')
-    ev.preventDefault;
     const {first_name, last_name, email, password, amazon_id} = this.state;
-    axios.post('/auth/signup', {first_name: this.state.first_name, last_name: this.state.last_name, email: this.state.email, hashed_password: this.state.password, amazon_id: this.state.amazon_id})
-    .then(function(response){
-      response.data;
+    axios.post('/auth/signup', {first_name: this.state.first_name, last_name: this.state.last_name, email: this.state.email, password: this.state.password, amazon_id: this.state.amazon_id})
+    .then((response) => {
+
+      console.log("response:", JSON.stringify(response));
+      this.props.handleAuth(response.data);
+    })
+    .catch((err) => {
+      console.error(err);
     })
   }
 

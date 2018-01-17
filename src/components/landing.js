@@ -7,7 +7,9 @@ class Landing extends Component {
   constructor(props) {
     super(props);
     this.onEmailSignIn = this.onEmailSignIn.bind(this);
-    // this.toSignUpPage = this.toSignUpPage.bind(this);
+    this.toSignUpPage = this.toSignUpPage.bind(this);
+    // this.onEmailChange = this.onEmailChange.bind(this);
+    // this.onPasswordChange = this.onPasswordChange.bind(this);
     this.state = {email: '', password: ''}
   }
 
@@ -22,17 +24,18 @@ class Landing extends Component {
   onEmailSignIn(ev) {
     ev.preventDefault();
     const {email, password} = this.state;
-    axios.post('/auth/login', {email: this.state.email, hashed_password: this.state.password})
-       .then(function(response){
-         response.data;
+    axios.post('/auth/login', {email: this.state.email, password: this.state.password})
+       .then((response) => {
+         this.props.handleAuth(response.data);
        })
   }
 
-  // toSignUpPage(ev) {
-  //   const { history } = this.props;
-  //   ev.preventDefault();
-  //   history.push('/signup');
-  //   }
+  toSignUpPage(ev) {
+    ev.preventDefault();
+    console.log('hitting button');
+    const { history } = this.props;
+    history.push('/signup');
+    }
 
   render() {
     if (this.props.isLoggedIn) {
@@ -41,7 +44,7 @@ class Landing extends Component {
       )
     }
     return (
-    <div class="landingForm">
+    <div className="landingForm">
     <form>
         <input
           type="text"
@@ -58,7 +61,7 @@ class Landing extends Component {
           value={this.state.password}
           onChange={event => this.onPasswordChange(event.target.value)} />
           <div className="buttons">
-            <button className="formSubmit" onClick={(ev) => this.toSignUpPage(ev)}>Create a New Account</button>
+            <button className="formSubmit" onClick={this.toSignUpPage}>Create a New Account</button>
             <button className="formSubmit" onClick={(ev) => this.onEmailSignIn(ev)}>Login</button>
           </div>
       </form>
