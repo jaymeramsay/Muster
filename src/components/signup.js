@@ -6,7 +6,14 @@ class Signup extends Component {
   constructor(props) {
     super(props);
     this.onSignUp = this.onSignUp.bind(this);
-    this.state = {first_name: '', last_name: '', email: '', password: '', amazon_id: ''}
+    this.state = {
+    first_name: '',
+    last_name: '',
+    email: '',
+    password: '',
+    amazon_id: '',
+    salary: '',
+    }
   }
   onFirstNameChange(first_name){
     this.setState({first_name});
@@ -28,14 +35,22 @@ class Signup extends Component {
     this.setState({amazon_id});
   }
 
+  onSalaryChange(salary) {
+    this.setState({salary});
+  }
+
   onSignUp(ev){
     ev.preventDefault();
-    console.log('hitting signup button')
-    const {first_name, last_name, email, password, amazon_id} = this.state;
-    axios.post('/auth/signup', {first_name: this.state.first_name, last_name: this.state.last_name, email: this.state.email, password: this.state.password, amazon_id: this.state.amazon_id})
+    const {first_name, last_name, email, password, amazon_id, salary} = this.state;
+    axios.post('/auth/signup',
+    {first_name: this.state.first_name,
+    last_name: this.state.last_name,
+    email: this.state.email,
+    password: this.state.password,
+    amazon_id: this.state.amazon_id,
+    salary: this.state.salary
+    })
     .then((response) => {
-
-      console.log("response:", JSON.stringify(response));
       this.props.handleAuth(response.data);
     })
     .catch((err) => {
@@ -89,6 +104,13 @@ class Signup extends Component {
             className="amazonInput"
             value={this.state.amazon_id}
             onChange={event => this.onAmazonIdChange(event.target.value)} />
+          <input
+            type="text"
+            name="salary"
+            placeholder="Salary"
+            className="amazonInput"
+            value={this.state.salary}
+            onChange={event => this.onSalaryChange(event.target.value)} />
             <div className="buttons">
               <button className="formSubmit" onClick={(ev) => this.onSignUp(ev)}>Sign-up Now</button>
             </div>

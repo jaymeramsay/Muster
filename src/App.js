@@ -14,24 +14,29 @@ class App extends Component {
      super(props);
      this.handleAuth = this.handleAuth.bind(this);
      this.handleSignOut = this.handleSignOut.bind(this);
+     this.handleSalaryEdit = this.handleSalaryEdit.bind(this);
      this.state = { isLoggedIn: false, user: null }
    }
 
    handleAuth(user) {
-       this.setState({ isLoggedIn:true, user:user})
-     }
+      this.setState({ isLoggedIn:true, user:user})
+    }
 
-  handleSignOut(){
-   this.setState({ isLoggedIn: false, user: null });
-   window.location.href="/";
- }
+    handleSignOut(){
+     this.setState({ isLoggedIn: false, user: null });
+     window.location.href="/";
+    }
+
+    handleSalaryEdit(salary){
+      this.setState({salary:salary})
+    }
 
   render() {
     return (
       <div className = "App" >
       <NavBar isLoggedIn={this.state.isLoggedIn} handleSignOut={this.handleSignOut} user={this.state.user}/>
       <Route exact path='/'render={(props) => <Landing  {...props} handleAuth={this.handleAuth} user={this.state.user} isLoggedIn={this.state.isLoggedIn}/>}/>
-      <Route path='/dashboard' render={(props) => <Dashboard {...props} user={this.state.user} isLoggedIn={this.state.isLoggedIn} />}/>
+      <Route path='/dashboard' render={(props) => <Dashboard {...props} handleSalaryEdit={this.handleSalaryEdit} user={this.state.user} isLoggedIn={this.state.isLoggedIn} />}/>
       <Route path='/signup' render={(props) => <Signup {...props} handleAuth={this.handleAuth} user={this.state.user} isLoggedIn={this.state.isLoggedIn} />}/>
       </div>
     );

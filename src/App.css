@@ -48,19 +48,56 @@ body {
 .Dashboard{
   display: flex;
   flex-direction: row;
+}
 
+.dashboardcontainer{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: gray;
 }
 
 
 /* ===========Wishlist Sidebar========== */
+.scrollbar{
+  display: flex;
+}
 .Wishlist{
   display: flex;
-  border: 2px solid red;
-  width: 200px;
-  height: 200px;
+  flex-direction: column;
+  background-color: white;
+  width: 300px;
 }
 .sidebar{
   border: 2px solid black;
   width: 100%;
   height: 100%;
+}
+
+/* ==========Wishlist Items============== */
+.WishlistItem{
+  display:flex;
+  flex-direction: row;
+}
+.listpicture{
+  align-self: center;
+}
+
+/* ==========Salary Breakdown Container======== */
+.Salary {
+  background-color: green;
+  border: 2px solid black;
+  width: 400px;
+  height: 300px;
+  margin: 20px
+}
+
+.salaryheader {
+  align-items: center;
+}
+
+.salarydisplay{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }

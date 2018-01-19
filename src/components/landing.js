@@ -59,8 +59,8 @@ class Landing extends Component {
           value={this.state.password}
           onChange={event => this.onPasswordChange(event.target.value)} />
           <div className="buttons">
-            <button className="formSubmit" onClick={this.toSignUpPage}>Create a New Account</button>
             <button className="formSubmit" onClick={(ev) => this.onEmailSignIn(ev)}>Login</button>
+            <button className="formSubmit" onClick={this.toSignUpPage}>Create a New Account</button>
           </div>
       </form>
     </div>

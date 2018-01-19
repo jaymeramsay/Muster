@@ -44,4 +44,18 @@ first_name: req.body.first_name,
     });
 })
 
+router.patch('/:id', (req, res) => {
+  knex('users')
+  .where({
+    id: req.params.id
+  })
+  .first()
+  .update({
+    first_name: req.body.first_name,
+    last_name: req.body.last_name,
+    email: req.body.email,
+    salary: req.body.salary
+  })
+})
+
 module.exports = router;

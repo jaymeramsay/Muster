@@ -17,7 +17,8 @@ router.post('/signup', (req, res, next) => {
       last_name: req.body.last_name,
       email: req.body.email,
       hashed_password,
-      amazon_id: req.body.amazon_id
+      amazon_id: req.body.amazon_id,
+      salary: req.body.salary
     }, '*'))
     .then(() => {
             res.send(req.body);

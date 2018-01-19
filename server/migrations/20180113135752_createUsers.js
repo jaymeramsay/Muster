@@ -5,7 +5,8 @@ exports.up = function (knex, Promise) {
     table.string('last_name').notNullable();
     table.string('email').notNullable().unique();
     table.specificType('hashed_password', 'char(60)').notNullable();
-    table.string('amazon_id');
+    table.string('amazon_id').notNullable();
+    table.integer('salary').notNullable();
     table.timestamps(true, true);
   });
 };
