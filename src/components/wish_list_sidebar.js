@@ -22,7 +22,7 @@ componentDidMount() {
 
  render() {
   const list = this.props.wishlist.map((item) => {
-     return <WishlistItem item={item} currentItem={this.props.currentItem}/>;
+     return <WishlistItem item={item} currentItem={this.props.currentItem} displayPrice={this.props.displayPrice}/>;
    })
    return (
      <Scrollbars

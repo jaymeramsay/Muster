@@ -15,22 +15,22 @@ class Salary extends Component {
   }
 
   calculateMonthlySalary(salary){
-    let monthlySalary = salary/12;
+    let monthlySalary = Math.floor(salary/12);
     return monthlySalary;
   };
 
   calculateWeeklySalary(salary){
-    let weeklySalary = salary/52;
+    let weeklySalary = Math.floor(salary/52);
     return weeklySalary;
   }
 
   calculateDailySalary(salary){
-    let dailySalary = salary/260;
+    let dailySalary = Math.floor(salary/260);
     return dailySalary;
   }
 
   calculateHourlySalary(salary){
-    let hourlySalary = salary/2080;
+    let hourlySalary = Math.floor(salary/2080);
     return hourlySalary;
   }
 
@@ -47,11 +47,11 @@ render(){
       <div className="Salary">
         <header classname="salaryheader"><p>Salary Breakdown</p></header>
         <div className="salarydisplay">
-          <div>Your annual salary: {this.props.user.salary}</div>
-          <div>Your monthly salary: {this.calculateMonthlySalary(this.props.user.salary)}</div>
-          <div>Your weekly salary: {this.calculateWeeklySalary(this.props.user.salary)}</div>
-          <div>Your daily salary: {this.calculateDailySalary(this.props.user.salary)}</div>
-          <div>Your hourly salary: {this.calculateHourlySalary(this.props.user.salary)}</div>
+          <div>Your annual salary: $ {this.props.user.salary}</div>
+          <div>Your monthly salary: $ {this.calculateMonthlySalary(this.props.user.salary)}</div>
+          <div>Your weekly salary: $ {this.calculateWeeklySalary(this.props.user.salary)}</div>
+          <div>Your daily salary: $ {this.calculateDailySalary(this.props.user.salary)}</div>
+          <div>Your hourly salary: $ {this.calculateHourlySalary(this.props.user.salary)}</div>
           <input
             type="text"
             name="salary"
@@ -59,7 +59,7 @@ render(){
             className="salaryInput"
             value={this.state.newSalary}
             onChange={event => this.setState({newSalary:event.target.value})} />
-          <button onClick={ () => {this.editSalary(this.state.newSalary)} }>Edit Salary</button>
+          <button onClick={ (ev) => {this.editSalary(ev)} }>Edit Salary</button>
         </div>
       </div>
     )
