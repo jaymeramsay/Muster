@@ -8,7 +8,7 @@ class WishlistItem extends Component {
   }
 
   handleClick(event){
-    let extractsPrice = this.props.item['new-price'].substring(26,32);
+    let extractsPrice = this.props.item['new-price'].substring(27,32);
     console.log(this.props.item.picture, extractsPrice);
     this.props.currentItem(this.props.item.picture);
     this.props.displayPrice(extractsPrice)
@@ -16,11 +16,13 @@ class WishlistItem extends Component {
 
   render(){
     let listPrice = this.props.item['new-price'];
-    let extractsPrice = this.props.item['new-price'].substring(26,32);
+    let extractsPrice = this.props.item['new-price'].substring(27,32);
 
     return(
     <div className="WishlistItem" onClick={this.handleClick}>
-      <img className="listpicture" src={this.props.item.picture}/>
+      <div className="listpicturecontainer">
+        <img className="listpicture" src={this.props.item.picture}/>
+      </div>
       <h5 classname="listname">{this.props.item.name}</h5>
       <div className="newprice"> {listPrice ? extractsPrice  : ''}</div>
     </div>

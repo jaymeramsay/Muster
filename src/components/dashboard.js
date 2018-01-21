@@ -11,7 +11,6 @@ class Dashboard extends Component {
     this.currentItem = this.currentItem.bind(this);
     this.displayPrice = this.displayPrice.bind(this);
     this.state = {data: 'loading...',
-                  // user: user,
                   width: null,
                   height: null,
                   wishlist: [],
@@ -38,6 +37,7 @@ class Dashboard extends Component {
     this.setState({price});
   }
 
+
   getWishlist() {
     axios.get(`https://cors-anywhere.herokuapp.com/http://www.justinscarpetti.com/projects/amazon-wish-lister/api/?id=${this.props.user.amazon_id}`)
     .then((response) => {
@@ -55,7 +55,7 @@ class Dashboard extends Component {
       </div>
       <div className="dashboardcontainer">
         <Salary handleSalaryEdit={this.props.handleSalaryEdit} user={this.props.user}/>
-        <ItemDisplay user={this.props.user} wishlist={this.state.wishlist} item={this.state.item} price={this.state.price}/>
+        <ItemDisplay user={this.props.user} wishlist={this.state.wishlist} item={this.state.item} price={this.state.price} salary={this.props.user.salary}/>
       </div>
       </div>
     );

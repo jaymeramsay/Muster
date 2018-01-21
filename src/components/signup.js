@@ -66,55 +66,62 @@ class Signup extends Component {
         )
       }
       return (
-      // <h1>Booyah Signup</h1>
-      <div class="landingForm">
-        <form>
-          <input
-            type="text"
-            name="first_name"
-            placeholder="First Name"
-            className="loginInput"
-            value={this.state.first_name}
-            onChange={event => this.onFirstNameChange(event.target.value)} />
-          <input
-            type="text"
-            name="last_name"
-            placeholder="Last Name"
-            className="loginInput"
-            value={this.state.last_name}
-            onChange={event => this.onLastNameChange(event.target.value)} />
-          <input
-            type="text"
-            name="email"
-            placeholder="Email Address"
-            className="loginInput"
-            value={this.state.email}
-            onChange={event => this.onEmailChange(event.target.value)} />
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            className="loginInput"
-            value={this.state.password}
-            onChange={event => this.onPasswordChange(event.target.value)} />
-          <input
-            type="text"
-            name="amazon_id"
-            placeholder="Amazon ID"
-            className="amazonInput"
-            value={this.state.amazon_id}
-            onChange={event => this.onAmazonIdChange(event.target.value)} />
-          <input
-            type="text"
-            name="salary"
-            placeholder="Salary"
-            className="amazonInput"
-            value={this.state.salary}
-            onChange={event => this.onSalaryChange(event.target.value)} />
-            <div className="buttons">
-              <button className="formSubmit" onClick={(ev) => this.onSignUp(ev)}>Sign-up Now</button>
+      <div className="Signup">
+        <div className="signUpForm">
+          <form>
+            <div className="nameinputs">
+              <input
+                type="text"
+                name="first_name"
+                placeholder="First Name"
+                className="signinInput"
+                value={this.state.first_name}
+                onChange={event => this.onFirstNameChange(event.target.value)} />
+              <input
+                type="text"
+                name="last_name"
+                placeholder="Last Name"
+                className="signinInput"
+                value={this.state.last_name}
+                onChange={event => this.onLastNameChange(event.target.value)} />
             </div>
-        </form>
+            <div className="emailinputs">
+              <input
+                type="text"
+                name="email"
+                placeholder="Email Address"
+                className="signinInput"
+                value={this.state.email}
+                onChange={event => this.onEmailChange(event.target.value)} />
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                className="signinInput"
+                value={this.state.password}
+                onChange={event => this.onPasswordChange(event.target.value)} />
+            </div>
+            <div className="userinputs">
+            <input
+                type="text"
+                name="amazon_id"
+                placeholder="Amazon ID"
+                className="signinInput"
+                value={this.state.amazon_id}
+                onChange={event => this.onAmazonIdChange(event.target.value)} />
+              <input
+                type="text"
+                name="salary"
+                placeholder="Salary"
+                className="signinInput"
+                value={this.state.salary}
+                onChange={event => this.onSalaryChange(event.target.value)} />
+              </div>
+              <div className="button">
+                <button className="submitButton" onClick={(ev) => this.onSignUp(ev)}>Sign-up Now</button>
+              </div>
+          </form>
+        </div>
       </div>
     )}
 };

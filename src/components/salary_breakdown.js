@@ -35,7 +35,8 @@ class Salary extends Component {
   }
 
   editSalary(salary){
-    axios.patch('/users/:id', {salary: this.props.user.salary})
+    console.log('inside editSalary');
+    axios.patch(`/users/${this.props.user.id}`, {salary: salary})
     .then((response) => {
       this.props.handleSalaryEdit(salary);
     })
@@ -43,27 +44,34 @@ class Salary extends Component {
   }
 
 render(){
+  let funds = this.props.user.salary;
     return (
       <div className="Salary">
-        <header classname="salaryheader"><p>Salary Breakdown</p></header>
+        <div className="salaryheader">
+          <header>Salary Breakdown</header>
+        </div>
+
         <div className="salarydisplay">
-          <div>Your annual salary: $ {this.props.user.salary}</div>
-          <div>Your monthly salary: $ {this.calculateMonthlySalary(this.props.user.salary)}</div>
-          <div>Your weekly salary: $ {this.calculateWeeklySalary(this.props.user.salary)}</div>
-          <div>Your daily salary: $ {this.calculateDailySalary(this.props.user.salary)}</div>
-          <div>Your hourly salary: $ {this.calculateHourlySalary(this.props.user.salary)}</div>
-          <input
-            type="text"
-            name="salary"
-            placeholder="Enter Salary Here"
-            className="salaryInput"
-            value={this.state.newSalary}
-            onChange={event => this.setState({newSalary:event.target.value})} />
-          <button onClick={ (ev) => {this.editSalary(ev)} }>Edit Salary</button>
+          <div> Annual income: $ {funds}</div>
+          <div> Monthly income: $ {this.calculateMonthlySalary(funds)}</div>
+          <div> Weekly income: $ {this.calculateWeeklySalary(funds)}</div>
+          <div> Daily income: $ {this.calculateDailySalary(funds)}</div>
+          <div> Hourly income: $ {this.calculateHourlySalary(funds)}</div>
+          <div className="salaryedit">
+            <input
+              type="text"
+              name="salary"
+              placeholder="Enter Salary Here"
+              className="salaryInput"
+              value={this.state.newSalary}
+              onChange={event => {this.setState({newSalary:event.target.value})} }/>
+            <button onClick={ () => {this.editSalary(this.state.newSalary)} }>Edit Salary</button>
+
+          </div>
         </div>
       </div>
-    )
-  }
-}
+      )
+    }
+};
 
 export default Salary;

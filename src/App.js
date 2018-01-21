@@ -6,7 +6,7 @@ import NavBar from './components/navbar';
 import Landing from './components/landing';
 import Dashboard from './components/dashboard';
 import Signup from './components/signup';
-// import logo from './logo.svg';
+
 import './App.css';
 
 class App extends Component {
@@ -28,7 +28,9 @@ class App extends Component {
     }
 
     handleSalaryEdit(salary){
-      this.setState({salary:salary})
+      let updatedUser = this.state.user;
+      updatedUser.salary = salary;
+      this.setState({user: updatedUser})
     }
 
   render() {

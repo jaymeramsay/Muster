@@ -1,9 +1,139 @@
 .App {
-  /* text-align: center; */
+
 }
 
-body {
-  background-color: teal;
+body{
+  background-image: url('./assets/travelmoney.jpeg');
+  background-size: cover;
+}
+
+input[type=text]{
+  border-radius: 8px;
+  border: 0;
+  padding-left: 12px;
+  padding-right: 12px;
+  height: 2.5em;
+  margin: 5px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+input[type=password]{
+  border-radius: 8px;
+  border: 0;
+  padding-left: 12px;
+  padding-right: 12px;
+  height: 2.5em;
+  margin: 5px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+input::placeholder {
+  font-style: "Roboto", sans-serif;
+}
+
+input:placeholder-shown {
+  font-style: "Roboto", sans-serif;
+}
+
+/* ================Landing============ */
+.Landing {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  font-family: 'Homemade Apple', cursive;
+}
+.landingForm {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: row;
+  width: 600px;
+
+  justify-content: space-around;
+  align-self: center;
+}
+
+.loginform {
+  display: flex;
+  justify-content: center;
+}
+
+.loginInput {
+  font-size: 100%;
+}
+
+.formSubmitButton {
+  font-size: 100%;
+  font-family: 'Roboto', sans-serif;
+  margin: 8px;
+  width: 100px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.formSubmitButton:hover{
+  background-color: grey;
+    color: white;
+}
+
+.formSigninButton {
+  font-size: 100%;
+  align-self: center;
+  width: 200px;
+  height: 40px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.formSigninButton:hover{
+  background-color: grey;
+  color: white;
+}
+
+p {
+  font-style: 25px;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.landingsignup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ===========Sign Up============= */
+.Signup{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+.signUpForm {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.signinInput {
+  font-size: 100%
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+}
+.submitButton {
+  font-size: 100%;
+  font-family: 'Roboto', sans-serif;
+  margin: 8px;
+  width: 150px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.submitButton:hover {
+  background-color: grey;
+  color: white;
 }
 
 /* =======NavBar============== */
@@ -15,6 +145,7 @@ body {
   align-self: center;
   background-color: gold;
   width: 100%;
+  height: 70px;
 }
 
 .title {
@@ -23,7 +154,8 @@ body {
   font-size: 40px;
   font-family: 'Homemade Apple', cursive;
   /* width: 170px; */
-  margin: 5px;
+  /* margin: 15px; */
+  margin-left: 20px;
 }
 
 .menu {
@@ -32,29 +164,29 @@ body {
   display: inline-flex;
   flex-direction: row-reverse;
   flex-wrap: nowrap;
-  justify-content: space-around;
-  align-self: center;
-}
-
-.landingForm {
-  margin-top: 200px;
-  display: flex;
   justify-content: center;
   align-self: center;
+  font-family: 'Roboto', sans-serif;
 }
+
+.greeting{
+  margin-top: 25px;
+}
+
+
 
 
 /* ===============Dashboard============= */
 .Dashboard{
   display: flex;
   flex-direction: row;
+  /* background-image: url('http://obniiis.com/wp-content/uploads/2017/04/teal-flowers-for-wedding-inspiration-smart-4.jpg'); */
 }
 
 .dashboardcontainer{
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: gray;
 }
 
 
@@ -67,6 +199,7 @@ body {
   flex-direction: column;
   background-color: white;
   width: 300px;
+  border: 3px solid brown;
 }
 .sidebar{
   border: 2px solid black;
@@ -77,7 +210,7 @@ body {
 /* ==========Wishlist Items============== */
 .WishlistItem{
   display:flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 .listpicture{
   align-self: center;
@@ -85,26 +218,35 @@ body {
 
 /* ==========Salary Breakdown Container======== */
 .Salary {
+  display: flex;
+  flex-direction: column;
   background-color: green;
   border: 2px solid black;
   width: 400px;
-  height: 300px;
+  height: 150px;
   margin: 20px
 }
 
 .salaryheader {
-  align-items: center;
+  diplay:flex;
+  margin: 0;
+  /* align-content: center; */
 }
 
 .salarydisplay {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  margin: 7px;
+}
+
+.salaryedit {
+  display: flex;
+  flex-direction: row;
 }
 
 /* =============Item Display=================== */
 .ItemDisplay {
   border: 2px solid black;
   width: 100%;
-  height: 100%;
+  height: 300px;
 }

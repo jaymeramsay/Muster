@@ -33,11 +33,9 @@ class NavBar extends Component {
     }
   return (
     <header className="titlebar">
-    <h1 className="title">Muster</h1>
+    <div className="title">Muster</div>
     <div className="menu">
     <div className="greeting">You are logged out.</div>
-    <div className="sample2">Booyah</div>
-    <div className="sample1">About</div>
     </div>
     </header>
   )}

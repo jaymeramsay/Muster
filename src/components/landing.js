@@ -8,7 +8,8 @@ class Landing extends Component {
     super(props);
     this.onEmailSignIn = this.onEmailSignIn.bind(this);
     this.toSignUpPage = this.toSignUpPage.bind(this);
-    this.state = {email: '', password: ''}
+    this.state = {email: '',
+                  password: ''}
   }
 
   onEmailChange(email) {
@@ -42,28 +43,34 @@ class Landing extends Component {
       )
     }
     return (
-    <div className="landingForm">
-    <form>
-        <input
-          type="text"
-          name="email"
-          placeholder="Email Address"
-          className="loginInput"
-          value={this.state.email}
-          onChange={event => this.onEmailChange(event.target.value)} />
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          className="loginInput"
-          value={this.state.password}
-          onChange={event => this.onPasswordChange(event.target.value)} />
-          <div className="buttons">
-            <button className="formSubmit" onClick={(ev) => this.onEmailSignIn(ev)}>Login</button>
-            <button className="formSubmit" onClick={this.toSignUpPage}>Create a New Account</button>
+    <div className="Landing">
+      <div className="landingForm">
+        <form>
+          <div className="loginform">
+            <input
+              type="text"
+              name="email"
+              placeholder="Email Address"
+              className="loginInput"
+              value={this.state.email}
+              onChange={event => this.onEmailChange(event.target.value)} />
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              className="loginInput"
+              value={this.state.password}
+              onChange={event => this.onPasswordChange(event.target.value)} />
+            <button className="formSubmitButton" onClick={(ev) => this.onEmailSignIn(ev)}>Login</button>
+          </div>
+
+          <div className="landingsignup">
+            <p>Need an account?   Sign up now!</p>
+            <button className="formSigninButton" onClick={this.toSignUpPage}>Create a New Account</button>
           </div>
       </form>
     </div>
+  </div>
   )}
 };
 export default Landing;

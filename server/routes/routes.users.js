@@ -56,6 +56,9 @@ router.patch('/:id', (req, res) => {
     email: req.body.email,
     salary: req.body.salary
   })
+    .then(() => {
+      res.send('user updated')
+    })
 })
 
 module.exports = router;
