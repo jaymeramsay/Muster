@@ -35,7 +35,7 @@ class NavBar extends Component {
               <div className="greeting">Welcome {this.props.user.first_name}!</div>
               <button className="logoutButton" onClick={this.onSignOut}>Sign Out</button>
 
-              // Mobile responsive HTML
+
               <nav>
                 <div class="nav-mobile">
                   <a id="nav-toggle" href="#!"><span></span></a>
@@ -69,7 +69,6 @@ class NavBar extends Component {
         <div className="greeting">Logged out</div>
       </div>
 
-      // Mobile responsive HTML
       <nav>
         <div class="nav-mobile">
           <a id="nav-toggle" href="#!"><span></span></a>
