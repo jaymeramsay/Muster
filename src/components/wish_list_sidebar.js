@@ -25,14 +25,12 @@ componentDidMount() {
   const list = this.props.wishlist.map((item) => {
      return <WishlistItem item={item} currentItem={this.props.currentItem} displayPrice={this.props.displayPrice}/>;
    })
-   if(this.props.wishlist) {
+
    return (
      <Scrollbars
      className="scrollbar"
-     style={{ width: 300 }}
      autoHeight
-     autoHeightMin={300}
-     autoHeightMax={500}
+     autoHeightMax={1000}
      >
      <div className="Wishlist">
      {list}
@@ -40,13 +38,6 @@ componentDidMount() {
      </Scrollbars>
       )
     }
-      return (
-        <div className="loader">
-          <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
-          <span class="sr-only">Loading...</span>
-        </div>
-      )
-  }
  };
 
 export default Wishlist;

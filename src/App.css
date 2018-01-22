@@ -28,11 +28,11 @@ input[type=password]{
 }
 
 input::placeholder {
-  font-style: "Roboto", sans-serif;
+  font-style: "Roboto Condensed", sans-serif;
 }
 
 input:placeholder-shown {
-  font-style: "Roboto", sans-serif;
+  font-style: "Roboto Condensed", sans-serif;
 }
 
 /* ================Landing============ */
@@ -63,7 +63,7 @@ input:placeholder-shown {
 
 .formSubmitButton {
   font-size: 100%;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   margin: 8px;
   width: 100px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
@@ -76,6 +76,9 @@ input:placeholder-shown {
 
 .formSigninButton {
   font-size: 100%;
+  font-weight: bold;
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: teal;
   align-self: center;
   width: 200px;
   height: 40px;
@@ -123,9 +126,11 @@ p {
   display: flex;
   justify-content: center;
 }
+
 .submitButton {
   font-size: 100%;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: teal;
   margin: 8px;
   width: 150px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
@@ -136,43 +141,111 @@ p {
   color: white;
 }
 
+
+
+
 /* =======NavBar============== */
+.NavBar {
+  display:flex;
+  width: 100%;
+}
+
 .titlebar {
   display: inline-flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-around;
-  align-self: center;
+  justify-content: space-between;
+  /* align-self: center; */
   background-color: gold;
   width: 100%;
   height: 70px;
 }
 
 .title {
-  order: 1;
-  flex-grow: 1;
   font-size: 40px;
   font-family: 'Homemade Apple', cursive;
   /* width: 170px; */
   /* margin: 15px; */
   margin-left: 20px;
+  flex-grow: 1;
 }
 
 .menu {
   height: 100%;
-  width: 300px;
+  width: 150px;
+  flex-grow: 1;
+  order: 2;
   display: inline-flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: flex-end;
+  align-content: center;
   align-self: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .greeting{
-  margin-top: 25px;
+  align-self: center;
+  margin: 20px;
 }
 
+.submenu {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  font-family: 'Roboto Condensed', sans-serif;
+  justify-content: space-around;
+  align-content: center;
+  align-self: center;
+  flex-grow: 1;
+}
+
+
+.logoutButton {
+  font-size: 100%;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin-right: 30px;
+  margin: 20px;
+  background-color: white;
+  color: black;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.logoutButton:hover {
+  background-color: grey;
+  color: black;
+}
+
+.navButtons {
+  font-size: 100%;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin-right: 8px;
+  margin: 8px;
+  width: 75px;
+  height: 30px;
+  background-color: teal;
+  color: black;
+  align-self: center;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+
+.navButtons:hover {
+  background-color: grey;
+  color: white;
+}
+
+.menuLink{
+  margin: 8px;
+  align-self: center;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  border-bottom: 2px solid black;
+}
 
 
 
@@ -180,6 +253,7 @@ p {
 .Dashboard{
   display: flex;
   flex-direction: row;
+  height: 100%;
   /* background-image: url('http://obniiis.com/wp-content/uploads/2017/04/teal-flowers-for-wedding-inspiration-smart-4.jpg'); */
 }
 
@@ -187,32 +261,79 @@ p {
   display: flex;
   flex-direction: column;
   width: 100%;
+  /* height: 100%; */
 }
+
+
 
 
 /* ===========Wishlist Sidebar========== */
 .scrollbar{
   display: flex;
+  height: 100%;
+  width: 25%;
 }
 .Wishlist{
   display: flex;
   flex-direction: column;
-  background-color: white;
+  justify-content: space-around;
+  background-color: #540800;
   width: 300px;
-  border: 3px solid brown;
-}
-.sidebar{
-  border: 2px solid black;
-  width: 100%;
-  height: 100%;
+  border: 3px solid black;
 }
 
 /* ==========Wishlist Items============== */
-.WishlistItem{
+.WishlistItem {
+  margin: 10px;
+  padding: 5px;
+  background-color: white;
+  border-style: double;
+  border: 2px solid black;
+}
+
+.itemcontainer {
   display:flex;
   flex-direction: column;
+  justify-content: space-between;
 }
-.listpicture{
+
+.listpicturecontainer {
+  display:flex;
+  justify-content: center;
+  /* border: 1px solid black; */
+  margin: 5px;
+  padding: 5px;
+}
+
+.listpicture {
+  margin: 5px;
+}
+
+.listnamecontainer {
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid black; */
+  margin: 5px;
+  padding: 5px;
+}
+
+.listname {
+  text-align: center;
+  font-size: 15px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+.pricecontainer {
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid black; */
+  margin: 5px;
+  padding: 5px;
+}
+
+.newprice {
+  font-family: 'Roboto Condensed', sans-serif;
   align-self: center;
 }
 
@@ -220,33 +341,124 @@ p {
 .Salary {
   display: flex;
   flex-direction: column;
-  background-color: green;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   width: 400px;
-  height: 150px;
-  margin: 20px
+  height: 300px;
+  align-self: flex-end;
+  margin: 30px;
 }
 
 .salaryheader {
-  diplay:flex;
-  margin: 0;
+  display: flex;
+  padding: 5px;
+  border: 3px solid black;
+  background-color: #229975;
+  /* width: 100%; */
   /* align-content: center; */
+}
+
+.salarytitle{
+  text-align: center;
+  align-self: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 25px;
+}
+
+.salaryContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+  border: 3px solid black;
+  background-color: #74de94;
+  /* width: 100%; */
 }
 
 .salarydisplay {
   display: flex;
+  font-size: 100%;
+  display: flex;
   flex-direction: column;
-  margin: 7px;
+  margin: 0px;
+  align-items: center;
+  justify-content: space-around;
+  /* width: 100%; */
+  padding: 10px;
 }
 
 .salaryedit {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  margin: 0px;
+  padding: 10px;
+  align-items: center;
+}
+
+.salaryOutputs {
+  font-size: 100%;
+  width: 100%
+}
+
+.salaryButton {
+  /* font-size: 100%; */
+  align-self: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 8px;
+  border-radius: 10px;
+  height: 30px;
+  background-color: white;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.salaryButton:hover {
+  background-color: grey;
+  color: white;
 }
 
 /* =============Item Display=================== */
 .ItemDisplay {
-  border: 2px solid black;
+  display: flex;
+  flex-direction: row-reverse;
   width: 100%;
-  height: 300px;
+  height: 100%;
+}
+
+.imagedisplaycontainer {
+  display: flex;
+  flex-direction: row;
+  width: 400px;
+  height: 250px;
+  border: 5px solid black;
+  background-color: white;
+  margin: 25px;
+  /* align-content: center; */
+}
+
+.imagedisplay {
+  width: 50%;
+  height: 75%;
+  align-self: center;
+  margin: 25px;
+  border: 1px solid black;
+}
+
+.priceHoursDisplay {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto Condensed', sans-serif;
+  justify-content: center;
+  /* align-items: center; */
+  margin: 12px;
+  /* font-weight: bold; */
+  /* font-size: 25px; */
+  color: black;
+}
+
+.cost {
+  margin: 10px;
+}
+
+.hours {
+  margin: 10px;
 }

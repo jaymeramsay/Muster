@@ -50,9 +50,9 @@ router.post('/login', (req, res) => {
 
 
 // remove logged in user from session
-router.get('/logout', (req, res, next) => {
-  req.session = null;
-  res.redirect('/');
-});
+// router.get('/logout', (req, res, next) => {
+//   req.session = null;
+//   res.redirect('/');
+// });
 
 module.exports = router;

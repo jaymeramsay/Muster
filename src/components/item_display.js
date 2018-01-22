@@ -21,11 +21,16 @@ class ItemDisplay extends Component {
 
   render(){
     let income = this.props.user.salary;
+
     return(
       <div className="ItemDisplay">
-        <img className="imagedisplay" src={this.props.item}/>
-        <div>{this.props.price}</div>
-        <div> {this.displayHoursNeeded(income)}</div>
+        <div className="imagedisplaycontainer">
+          <img className="imagedisplay" src={this.props.item}/>
+          <div className="priceHoursDisplay">
+            <div className="cost">Cost: {this.props.price}</div>
+            <div className="hours"> Required Hourly Labor: {isNaN(this.displayHoursNeeded(income)) ? null : this.displayHoursNeeded(income)} </div>
+          </div>
+        </div>
       </div>
     )
   }

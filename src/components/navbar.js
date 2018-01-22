@@ -22,22 +22,39 @@ class NavBar extends Component {
   render() {
     if(this.props.isLoggedIn){
       return (
-        <header className="titlebar">
-        <h1 className="title">Muster</h1>
-        <div className="menu">
-        <div className="greeting">Welcome {this.props.user.first_name}!</div>
+        <div className="Navbar">
+          <header className="titlebar">
+            <a href="/" className="title" onClick={this.onSignOut}>Muster</a>
+              <div className="submenu">
+                <a href="/" className="contact">Contact</a>
+                <a href="/" className="support">Support</a>
+                <a href="/" className="budget">Budget</a>
+              </div>
+              <div className="menu">
+              <a href="/" className="menuLink">Account</a>
+              <div className="greeting">Welcome {this.props.user.first_name}!</div>
+              <button className="logoutButton" onClick={this.onSignOut}>Sign Out</button>
+            </div>
+          </header>
         </div>
-        <button onClick={this.onSignOut}>Sign Out</button>
-        </header>
       )
     }
   return (
-    <header className="titlebar">
-    <div className="title">Muster</div>
-    <div className="menu">
-    <div className="greeting">You are logged out.</div>
+    <div className="NavBar">
+      <header className="titlebar">
+      <a href="/" className="title" onClick={this.onSignOut}>Muster</a>
+      <div className="submenu">
+        <a href="/" className="contact">Contact</a>
+        <a href="/" className="support">Support</a>
+        <a href="/" className="about">How it works</a>
+      </div>
+      <div className="menu">
+        <a href="/" className="menuLink">Login</a>
+        <button className="navButtons">Signup</button>
+        <div className="greeting">Logged out</div>
+      </div>
+      </header>
     </div>
-    </header>
   )}
 };
 
