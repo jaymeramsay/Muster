@@ -15,7 +15,7 @@ class ItemDisplay extends Component {
   displayHoursNeeded(salary){
     let hourlySalary = Math.floor(salary/2080);
     let cost = parseFloat(this.props.price);
-    let hours = Math.floor(cost/hourlySalary);
+    let hours = Math.ceil(cost/hourlySalary);
     return hours;
   }
 
