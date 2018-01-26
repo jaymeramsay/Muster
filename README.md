@@ -36,10 +36,7 @@ Technologies:
 <br><br>
 <br>
 
-# Let's Have a Look!
-### Muster Demo
-
-[Muster Demo](https://youtu.be/Q1L-1ZRinI4)
+# Have a look at the [Muster Demo](https://youtu.be/Q1L-1ZRinI4) here!
 
 ### Getting Started with the Code
 - npm install
