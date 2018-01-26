@@ -1,11 +1,11 @@
 # Muster
 
 ## Welcome to Muster!
+Helping people budget and set goals to acquire wish list items, Muster breaks down salary and calculates how many labor hours needed to purchase the items.
 ![musterpage](musterpage.jpg)
 
 Muster is an interactive, full stack web app built over the course of two weeks.
 
-Helping people budget and set goals to acquire wish list items, Muster breaks down salary and calculates how many labor hours needed to purchase the items.
 
 Technologies:
 * React
@@ -46,4 +46,4 @@ Technologies:
 - npm install
 - npm run build
 
-### Check it out on [Heroku](https://musterapp.herokuapp.com)!
+### Check out the [live version](https://musterapp.herokuapp.com)!
