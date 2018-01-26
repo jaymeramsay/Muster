@@ -39,7 +39,7 @@ Technologies:
 # Let's Have a Look!
 ### Muster Demo
 
-![Muster Demo](https://youtu.be/Q1L-1ZRinI4)
+[Muster Demo](https://youtu.be/Q1L-1ZRinI4)
 
 ### Getting Started with the Code
 - npm install
