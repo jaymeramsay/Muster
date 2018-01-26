@@ -1,7 +1,7 @@
 # Muster
 
 **Welcome to Muster!**
-![(\Desktop\musterpage.jpg)]
+![\musterpage.jpg)]
 
 Muster is an interactive, full stack web app built over the course of two weeks.
 
