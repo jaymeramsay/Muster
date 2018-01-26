@@ -34,8 +34,6 @@ Technologies:
 
 ## Features:
 
-<br><br>
-
 ### Displays Amazon wish list items
 ![jaymewishlist](jaymewishlist.jpg) ![musterwishlist](musterwishlist.jpg)
 
