@@ -1,6 +1,6 @@
 # Muster
 
-##Welcome to Muster!
+## Welcome to Muster!
 ![musterpage](musterpage.jpg)
 
 Muster is an interactive, full stack web app built over the course of two weeks.
@@ -34,8 +34,8 @@ Technologies:
 
 ## Features:
 
-*Displays Amazon wish list items
-!()
+### Displays Amazon wish list items
+![jaymewishlist]()
 
 ## Experience Muster for yourself!
 ### Have a look at the [demo](https://youtu.be/Q1L-1ZRinI4) here!
