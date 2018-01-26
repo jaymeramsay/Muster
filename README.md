@@ -1,9 +1,6 @@
-https://musterapp.herokuapp.com
-
-
 # Muster
 
-**Welcome to Muster **
+**Welcome to Muster!**
 
 Muster is an interactive, full stack web app built over the course of two weeks.
 
@@ -31,13 +28,14 @@ Technologies:
 * Routing became confusing. Between my Knex queries on the back-end and my Axios queries on the front-end, sending data wasn't clear at first. There were different queries for each end and I had to double check and make sure the right data was being sent from end to end.
 
 * I had some deployment issues around corrupt migrations. In the beginning, I created an ERD that shaped my database. I went ahead and created all of those tables at the top of my sprint, later to realize I only needed one table instead of three. I deleted the tables I didn't need and learned what it means to do that. Just because I delete them from my file structure, it doesn't mean that Knex deletes them, and if I delete the migrations tables in Knex, that doesn't mean that Heroku deletes them. I learned that I probably shouldn't ever mess with my databases like this in the future, but if absolutely necessary, I know how to solve this problem and where to drop my tables.
-
-
 <br><br>
 <br>
 
-# Have a look at the [Muster Demo](https://youtu.be/Q1L-1ZRinI4) here!
+# Experience Muster for yourself!
+### Have a look at the [demo](https://youtu.be/Q1L-1ZRinI4) here!
 
 ### Getting Started with the Code
 - npm install
 - npm run build
+
+### Check it out on [Heroku](https://musterapp.herokuapp.com)!
