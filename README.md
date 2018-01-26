@@ -35,7 +35,7 @@ Technologies:
 ## Features:
 
 ### Displays Amazon wish list items
-![jaymewishlist]()
+![jaymewishlist](jaymewishlist.jpg) ![musterwishlist](musterwishlist.jpg)
 
 ## Experience Muster for yourself!
 ### Have a look at the [demo](https://youtu.be/Q1L-1ZRinI4) here!
